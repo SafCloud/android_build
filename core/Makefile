@@ -3564,7 +3564,7 @@ INTERNAL_OTATOOLS_MODULES := \
   avbtool \
   blk_alloc_to_base_fs \
   boot_signer \
-  brillo_update_payload \
+  #brillo_update_payload \
   brotli \
   bsdiff \
   build_verity_metadata \
@@ -4269,7 +4269,7 @@ INTERNAL_OTA_METADATA := $(PRODUCT_OUT)/ota_metadata
 $(INTERNAL_OTA_PACKAGE_TARGET): KEY_CERT_PAIR := $(DEFAULT_KEY_CERT_PAIR)
 
 ifeq ($(AB_OTA_UPDATER),true)
-$(INTERNAL_OTA_PACKAGE_TARGET): $(BRILLO_UPDATE_PAYLOAD)
+#$(INTERNAL_OTA_PACKAGE_TARGET): $(BRILLO_UPDATE_PAYLOAD)
 else
 $(INTERNAL_OTA_PACKAGE_TARGET): $(BROTLI)
 endif
